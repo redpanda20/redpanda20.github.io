@@ -21,6 +21,11 @@ body {
 	display: grid;
 	grid-template-rows: auto 1fr auto;
 	padding: 1rem;
+
+	@media screen and (prefers-color-scheme: dark) {
+		background-color: #1e1e1e;
+		color: white;
+	}
 }
 
 main {

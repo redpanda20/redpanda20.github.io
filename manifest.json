@@ -7,7 +7,19 @@
 	"theme_color": "#1e1e1e",
 	"icons": [
 		{
+			"src": "/icon-black.svg",
+			"sizes": "any",
+			"type": "image/svg",
+			"purpose": "maskable"
+		},
+		{
+			"src": "/icon-512x512.png",
+			"sizes": "512x512",
+			"type": "image/png"
+		},
+		{
 			"src": "/icon.svg",
+			"sizes": "any",
 			"type": "image/svg"
 		}
 	]
