@@ -12,93 +12,8 @@
     <script src="https://kit.fontawesome.com/e62e855c9e.js" crossorigin="anonymous" async></script>
     <link rel="icon" href="icon.svg" />
     <link rel="manifest" href="manifest.json" />
+    <link rel="stylesheet" href="style.css">
     <style>
-        /* Reset */
-
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            font: inherit;
-        }
-
-        /* Base styles */
-
-        :root {
-            font-family: system-ui;
-            font-size: 1rem;
-
-            --clr-primary: #c566ff;
-            --clr-accent: #fc506e;
-        }
-
-        body {
-            min-height: 100vh;
-            display: grid;
-            grid-template-rows: auto 1fr auto;
-            padding: 1rem;
-
-            @media screen and (prefers-color-scheme: dark) {
-                background-color: #1e1e1e;
-                color: white;
-            }
-        }
-
-        main {
-            display: grid;
-            place-content: center;
-            text-align: center;
-        }
-
-        section {
-            display: grid;
-            justify-items: center;
-            gap: 1rem;
-        }
-
-        a {
-            text-decoration: none;
-            color: currentColor;
-        }
-
-        /* Utilities */
-
-        .h1 {
-            font-size: 3rem;
-            font-weight: 700;
-        }
-
-        .flex-center {
-            display: flex;
-            justify-content: center;
-            gap: 0.5em;
-        }
-
-        .faded {
-            opacity: 0.6;
-        }
-
-        /* Specific elements */
-
-        .highlight {
-            background-image: linear-gradient(to right, var(--clr-primary), var(--clr-accent));
-            background-clip: text;
-
-            --fa-primary-opacity: 0;
-
-            .h1 {
-                color: transparent
-            }
-
-            a {
-                transition: color 300ms;
-                outline: none;
-            }
-
-            a:hover,
-            a:focus-visible {
-                color: transparent;
-            }
-        }
     </style>
 </head>
 
@@ -107,7 +22,7 @@
     </header>
 
     <main>
-        <section class="highlight">
+        <section class="hero centered">
             <h1 class="h1">Alexandra Stephens</h2>
                 <p>Software Engineering student at the <a href="https://www.canterbury.ac.nz/">University of
                         Canterbury</a>
@@ -121,6 +36,20 @@
                             class="fa-solid fa-envelope"></i></a>
                 </div>
         </section>
+        <section class="fa-2xl centered">
+            <h2 class="h2">Projects</h2>
+            <i class=" fa-solid fa-chevron-down"></i>
+        </section>
+        <div class="even-columns">
+            <section class="card">
+                <h3 class="h3">RPG Compendium</h3>
+                <p>A companion app for a living campaign, written in Rust & WebAssembly.</p>
+                <a href="/RPG-Compendium/" class="button right">
+                    Learn more
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+        </div>
+        </div>
     </main>
 
     <footer>
