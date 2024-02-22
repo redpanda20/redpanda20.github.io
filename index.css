@@ -3,7 +3,7 @@
 * {
 	box-sizing: border-box;
 	margin: 0;
-	font: inherit
+	font: inherit;
 }
 
 /* Base styles */
@@ -76,6 +76,7 @@ a {
 
 	a {
 		transition: color 300ms;
+		outline: none;
 	}
 
 	a:hover,
