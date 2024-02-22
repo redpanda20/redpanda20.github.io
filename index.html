@@ -28,7 +28,8 @@
             font-size: 1rem;
 
             --clr-primary: #c566ff;
-            --clr-accent: #fc506e;
+            --clr-secondary: #fc506e;
+            --clr-tertiary: #65def1;
         }
 
         body {
@@ -78,10 +79,22 @@
         }
 
         /* Specific elements */
+        @keyframes scrolling-gradient {
+            from {
+                background-position: 0% 0%;
+            }
+
+            to {
+                background-position: 100% 0%;
+            }
+        }
 
         .highlight {
-            background-image: linear-gradient(to right, var(--clr-primary), var(--clr-accent));
+            background-image: linear-gradient(to right, var(--clr-primary), var(--clr-secondary), var(--clr-tertiary), var(--clr-primary), var(--clr-secondary));
             background-clip: text;
+
+            background-size: 300% 100%;
+            animation: scrolling-gradient 10s linear infinite;
 
             --fa-primary-opacity: 0;
 
