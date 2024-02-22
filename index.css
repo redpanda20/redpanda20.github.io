@@ -1,0 +1,82 @@
+/* Reset */
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	font: inherit
+}
+
+/* Base styles */
+
+:root {
+	font-family: system-ui;
+	font-size: 1rem;
+
+	--clr-primary: #c566ff;
+	--clr-accent: #fc506e;
+}
+
+body {
+	min-height: 100vh;
+	display: grid;
+	grid-template-rows: auto 1fr auto;
+}
+
+main {
+	display: grid;
+	place-content: center;
+}
+
+footer {
+	padding: 1rem;
+}
+
+section {
+	display: grid;
+	justify-items: center;
+	gap: 1rem;
+}
+
+a {
+	text-decoration: none;
+	color: currentColor;
+}
+
+/* Utilities */
+
+.h1 {
+	font-size: 3rem;
+	font-weight: 700;
+}
+
+.flex-center {
+	display: flex;
+	justify-content: center;
+	gap: 0.5em;
+}
+
+.faded {
+	opacity: 0.6;
+}
+
+/* Specific elements */
+
+.highlight {
+	background-image: linear-gradient(to right, var(--clr-primary), var(--clr-accent));
+	background-clip: text;
+
+	--fa-primary-opacity: 0;
+
+	.h1 {
+		color: transparent
+	}
+
+	a {
+		transition: color 300ms;
+	}
+
+	a:hover,
+	a:focus-visible {
+		color: transparent;
+	}
+}
