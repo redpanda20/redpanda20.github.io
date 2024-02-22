@@ -20,15 +20,13 @@ body {
 	min-height: 100vh;
 	display: grid;
 	grid-template-rows: auto 1fr auto;
+	padding: 1rem;
 }
 
 main {
 	display: grid;
 	place-content: center;
-}
-
-footer {
-	padding: 1rem;
+	text-align: center;
 }
 
 section {
