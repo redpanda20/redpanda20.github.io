@@ -13,35 +13,24 @@
 	font-size: 1rem;
 
 	--clr-primary: hsl(277 100% 70%);
-	--clr-accent: hsl(350 100% 65%);
-}
+	--clr-secondary: hsl(350 100% 65%);
 
-body {
-	min-height: 100vh;
-	display: grid;
-	grid-template-rows: auto 1fr auto;
-	padding: 1rem;
+	--clr-background: white;
+	color: black;
 
 	@media screen and (prefers-color-scheme: dark) {
-		background-color: #1e1e1e;
+		--clr-background: #1e1e1e;
 		color: white;
 	}
 }
 
-main {
-	display: flex;
-	flex-direction: column;
-	place-content: center;
-	gap: 2rem;
+body {
+	background-color: var(--clr-background);
 }
 
 footer {
 	margin-top: 2rem;
-}
-
-section {
-	display: grid;
-	gap: 1rem;
+	padding-inline: 1rem;
 }
 
 a {
@@ -65,16 +54,23 @@ a {
 	font-size: 1.5rem;
 }
 
-.card {
-	padding: 0.5rem;
-	border-radius: 0.5rem 0.5rem 1.5rem 0.5rem;
-	background-color: hsl(277 100% 70% / 0.2);
+.button {
+	display: flex;
+	gap: 1ch;
+	align-items: center;
+
+	padding: 1rem;
+	background: linear-gradient(to right, var(--clr-primary), var(--clr-secondary));
+	background-attachment: fixed;
+	border-radius: 1rem;
+
+	outline: 7px solid var(--clr-background);
+	outline-offset: -6px;
 }
 
-.button {
-	border: 1px solid white;
-	border-radius: 1em;
-	padding: 0.5em;
+.button:hover,
+.button:focus-visible {
+	outline: 4px solid var(--clr-background);
 }
 
 .flex-center {
@@ -103,25 +99,75 @@ a {
 /* Specific elements */
 
 .hero {
-	height: 90vh;
-	padding-block: 40vh;
+	display: grid;
+	place-content: center;
+	height: 90dvh;
+	gap: 1rem;
+}
 
-	background-image: linear-gradient(to right, var(--clr-primary), var(--clr-accent));
+.hero-indicator {
+	display: grid;
+	place-content: center;
+	place-items: center;
+	height: 10dvh;
+}
+
+.h1 {
+	background: linear-gradient(to right, var(--clr-primary), var(--clr-secondary));
+	background-attachment: fixed;
 	background-clip: text;
+	color: transparent;
+	margin-bottom: -1rem;
+}
 
-	--fa-primary-opacity: 0;
+.highlight:hover,
+.highlight:focus-visible {
+	background: linear-gradient(to right, var(--clr-primary), var(--clr-secondary));
+	background-attachment: fixed;
+	background-clip: text;
+	color: transparent;
+	outline: none;
+}
 
-	.h1 {
-		color: transparent
-	}
+.card {
+	display: grid;
+	position: relative;
+	padding: 1rem;
+	background: var(--clr-background);
+	background-clip: padding-box;
+	border: 2px solid transparent;
+	border-radius: 1rem;
+}
 
-	a {
-		transition: color 300ms;
-		outline: none;
-	}
+.card:before {
+	content: '';
+	position: absolute;
+	inset: 0;
+	z-index: -1;
+	margin: -2px;
+	border-radius: inherit;
+	background: linear-gradient(to right, var(--clr-primary), var(--clr-secondary));
+	background-attachment: fixed;
+}
 
-	a:hover,
-	a:focus-visible {
-		color: transparent;
-	}
+.mark {
+	height: 2rem;
+	width: 3rem;
+	mask-repeat: no-repeat;
+	mask-position: center;
+	mask-size: contain;
+
+	background: white;
+}
+
+*:hover>.mark,
+*:focus-visible>.mark {
+	background: linear-gradient(to right, var(--clr-primary), var(--clr-secondary));
+	background-attachment: fixed;
+}
+
+.content-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+	padding-inline: 1rem;
 }

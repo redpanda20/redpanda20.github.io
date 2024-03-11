@@ -9,7 +9,6 @@
     <meta name="color-scheme" content="dark light">
     <meta name="theme-color" content="#1e1e1e" />
     <title>Alexandra Stephens</title>
-    <script src="https://kit.fontawesome.com/e62e855c9e.js" crossorigin="anonymous" async></script>
     <link rel="icon" href="icon.svg" />
     <link rel="manifest" href="manifest.json" />
     <link rel="stylesheet" href="style.css">
@@ -18,39 +17,43 @@
 </head>
 
 <body>
-    <header>
-    </header>
+    <section class="hero">
+        <h1 class="h1">Alexandra Stephens</h2>
+            <p>Software Engineering student at the <a class="highlight" href="https://www.canterbury.ac.nz/">University
+                    of
+                    Canterbury</a>
+            </p>
 
-    <main>
-        <section class="hero centered">
-            <h1 class="h1">Alexandra Stephens</h2>
-                <p>Software Engineering student at the <a href="https://www.canterbury.ac.nz/">University of
-                        Canterbury</a>
-                </p>
-                <div class="flex-center fa-2xl">
-                    <a href="https://discord.com/users/208870868867219459" aria-label="Link to my discord account"><i
-                            class="fa-brands fa-discord"></i></a>
-                    <a href="https://github.com/redpanda20" aria-label="Link to my personal github account"><i
-                            class="fa-brands fa-github"></i></a>
-                    <a href="mailto:website@stephens.ac" aria-label="Contact me via email"><i
-                            class="fa-solid fa-envelope"></i></a>
-                </div>
-        </section>
-        <section class="fa-2xl centered">
-            <h2 class="h2">Projects</h2>
-            <i class=" fa-solid fa-chevron-down"></i>
-        </section>
-        <div class="even-columns">
-            <section class="card">
-                <h3 class="h3">RPG Compendium</h3>
-                <p>A companion app for a living campaign, written in Rust & WebAssembly.</p>
-                <a href="/RPG-Compendium/" class="button right">
-                    Learn more
-                    <i class="fa-solid fa-arrow-right"></i>
+            <div style="display: flex; justify-content: center;">
+                <a href="https://discord.com/users/208870868867219459" aria-label="Link to my discord account">
+                    <div class="mark" style="mask-image: url('discord-mark.svg');"></div>
                 </a>
+                <a href="https://github.com/redpanda20" aria-label="Link to my personal github account">
+                    <div class="mark" style="mask-image: url('github-mark.svg');"></div>
+                </a>
+                <a href="mailto:website@stephens.ac" aria-label="Contact me via email">
+                    <div class="mark" style="mask-image: url('email.svg');"></div>
+                </a>
+            </div>
+    </section>
+    <section class="hero-indicator">
+        <h2 class="h2">Projects</h2>
+        <svg height="2rem" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M20 12l-1.41-1.41L13 16.17V4h-2v12.17l-5.58-5.59L4 12l8 8 8-8z" />
+        </svg>
+    </section>
+    <section class="content-grid">
+        <div class="card">
+            <h3 class="h3">RPG Compendium</h3>
+            <p>A companion app for a living campaign, written in Rust & WebAssembly.</p>
+            <a href="/RPG-Compendium/" class="button right">
+                Learn more
+                <svg height="1em" viewBox="2 2 20 20" fill="currentColor">
+                    <path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z" />
+                </svg>
+            </a>
         </div>
-        </div>
-    </main>
+    </section>
 
     <footer>
         <p class="faded">&copy; 2024 Alexandra Stephens. All rights reserved.</p>
