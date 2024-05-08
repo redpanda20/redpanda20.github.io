@@ -135,7 +135,7 @@ a {
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
 	padding: 1rem;
-	gap: 1rem;
+	gap: 1.5rem 1rem;
 }
 
 .card {
@@ -158,4 +158,57 @@ a {
 	border-radius: inherit;
 	background: linear-gradient(to right, var(--clr-primary), var(--clr-secondary));
 	background-attachment: fixed;
+}
+
+.tags {
+	position: absolute;
+	bottom: -1rem;
+	left: 1rem;
+	display: flex;
+	gap: 0.5rem;
+}
+
+.tag {
+	padding: 0.25rem 0.5rem;
+	border-radius: 0.75rem;
+	color: var(--_clr, deeppink);
+	background-color: var(--clr-background);
+	border: 2px solid var(--_clr, deeppink);
+	outline: 2px solid var(--clr-background);
+}
+
+/* Why are you looking in here? */
+/* Regardless: https://github.com/ozh/github-colors/blob/master/colors.json */
+.asm {
+	--_clr: #6E4C13;
+}
+.c {
+	--_clr: #555555;
+}
+.cpp {
+	--_clr: #f34b7d;
+}
+.css {
+	--_clr: #563d7c;
+}
+.html {
+	--_clr: #e34c26;
+}
+.java {
+	--_clr: #b07219;
+}
+.js {
+	--_clr: #f1e05a;
+}
+.py {
+	--_clr: #3572A5;
+}
+.rust {
+	--_clr: #dea584;
+}
+.unreal {
+	--_clr: #a54c4d;
+}
+.wasm {
+	--_clr: #6250e7;
 }
