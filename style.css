@@ -53,11 +53,15 @@ a {
 .h3 {
 	font-size: 1.5rem;
 }
+.h3 + p {
+	margin-bottom: 0.5rem;
+}
 
 .button {
 	display: flex;
 	gap: 1ch;
 	align-items: center;
+	z-index: 1;
 
 	background-attachment: fixed;
 	border-radius: 1rem;
@@ -182,8 +186,8 @@ a {
 }
 
 .tag {
-	padding: 0.25rem 0.5rem;
-	border-radius: 0.75rem;
+	padding-inline: 0.5rem;
+	border-radius: 1rem;
 	color: var(--_clr, deeppink);
 	background-color: var(--clr-background);
 	border: 2px solid var(--_clr, deeppink);
