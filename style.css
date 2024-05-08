@@ -59,18 +59,31 @@ a {
 	gap: 1ch;
 	align-items: center;
 
-	padding: 1rem;
-	background: linear-gradient(to right, var(--clr-primary), var(--clr-secondary));
 	background-attachment: fixed;
 	border-radius: 1rem;
+	outline-offset: -4px;
+	padding: 0.5rem;
 
-	outline: 7px solid var(--clr-background);
-	outline-offset: -6px;
-}
+	@media (prefers-color-scheme: dark) {
+		background: linear-gradient(to right, var(--clr-primary), var(--clr-secondary));
+		background-attachment: fixed;
 
-.button:hover,
-.button:focus-visible {
-	outline: 4px solid var(--clr-background);
+		&:hover,
+		&:focus-visible {
+			outline: 2px solid var(--clr-background);
+		}
+	}
+
+	@media (prefers-color-scheme: light) {
+		background: var(--clr-background);
+		border: 2px solid var(--clr-primary);
+		outline-offset: -6px;
+
+		&:hover,
+		&:focus-visible {
+			outline: 2px solid var(--clr-primary);
+		}	
+	}
 }
 
 .faded {
