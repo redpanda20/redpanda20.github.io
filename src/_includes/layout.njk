@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Alexandra Stephens - Computer Science at the University of Canterbury" />
+  <meta name="color-scheme" content="dark light">
+  <title>Alexandra Stephens</title>
+  <style>
+    @font-face {
+      font-family: "Alkatra";
+      src:
+      url({{ '/assets/font/AlkatraVariable.woff2' | url }}) format("woff2"),
+      url({{ '/assets/font/Alkatra-Variable.ttf' | url }}) format("ttf");
+      font-display: swap;
+    }
+    @font-face {
+      font-family: "Inter";
+      src:
+      url({{ '/assets/font/InterVariable.woff2' | url }}) format("woff2"),
+      url({{ '/assets/font/Inter-Variable.ttf' | url }}) format("ttf");
+      font-display: swap;
+    }
+  </style>
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | url }}" />
+  <link rel="icon" href="{{ '/assets/img/icon.svg' | url }}">
+</head>
+<body class="page">
+
+  {% block content %}{% endblock %}
+  
+  <footer class="footer">
+			Licensed by Alexandra Stephens under <a class="no-contrast" href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>.
+  </footer>
+  
+</body>
+</html>

@@ -1,0 +1,17 @@
+{
+  "name": "redpanda-site-11ty",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build": "eleventy",
+    "start": "eleventy --serve",
+    "build-ghpages": "npx @11ty/eleventy --pathprefix=/redpanda_11ty/"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^2.0.0"
+  },
+  "dependencies": {
+    "@11tyrocks/eleventy-plugin-lightningcss": "^1.5.0",
+    "html-minifier": "^4.0.0"
+  }
+}
