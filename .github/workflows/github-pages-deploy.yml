@@ -2,7 +2,7 @@ name: Github Pages Deployment
 
 on:
   push:
-    branches: ["master"]
+    branches: ["main"]
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -49,20 +49,20 @@ jobs:
           key: ${{ runner.os }}-eleventy-fetch-cache
 
       - run: npm install
-      - run: npm run build-ghpages
+      - run: npm run build
       # - - - - - - - - - - - - - - - - - - -
 
       # (Github Default) Configure github pages
       - name: Setup Pages
         uses: actions/configure-pages@v5
-      
+
       # (Github Default) Upload artifact to pages
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
           # Upload just the build folder
           path: '_site/'
-      
+
       # (Github Default) Confirm pages deployment
       - name: Deploy to GitHub Pages
         id: deployment

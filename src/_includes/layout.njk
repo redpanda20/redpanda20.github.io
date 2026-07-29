@@ -1,11 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
+  {% set pageTitle = title or site.title %}
+  {% set pageDescription = preview or site.description %}
+  {% set pageImage = image or (images[0].src if images else null) %}
+  {% set pageUrl = page.url | absoluteUrl(site.url) %}
+
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Alexandra Stephens - Computer Science at the University of Canterbury" />
+  <meta name="description" content="{{ pageDescription }}" />
   <meta name="color-scheme" content="dark light">
-  <title>Alexandra Stephens</title>
+  <title>{{ pageTitle }}{% if title %} · {{ site.title }}{% endif %}</title>
+  <link rel="canonical" href="{{ pageUrl }}" />
+
+  <meta property="og:title" content="{{ pageTitle }}" />
+  <meta property="og:description" content="{{ pageDescription }}" />
+  <meta property="og:url" content="{{ pageUrl }}" />
+  <meta property="og:type" content="{{ 'article' if date else 'website' }}" />
+  {% if pageImage %}
+  <meta property="og:image" content="{{ pageImage | absoluteUrl(site.url) }}" />
+  {% endif %}
+
   <style>
     @font-face {
       font-family: "Alkatra";
@@ -28,10 +44,10 @@
 <body class="page">
 
   {% block content %}{% endblock %}
-  
+
   <footer class="footer">
 			Licensed by Alexandra Stephens under <a class="no-contrast" href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>.
   </footer>
-  
+
 </body>
 </html>

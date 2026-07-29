@@ -4,8 +4,7 @@
   "private": true,
   "scripts": {
     "build": "eleventy",
-    "start": "eleventy --serve",
-    "build-ghpages": "npx @11ty/eleventy --pathprefix=/redpanda_11ty/"
+    "start": "eleventy --serve"
   },
   "devDependencies": {
     "@11ty/eleventy": "^2.0.0"
