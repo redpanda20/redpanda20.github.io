@@ -14,9 +14,16 @@ I wanted an easy way to sketch out hex-tile maps for tabletop games without wres
 
 ![](/assets/img/hex-map-editor-icon.png)
 
+## Features
+- **Unlimited canvas.** Create maps of any sized without fixed boundaries 
+- **Smooth navigation.** Pan freely around your map as you work
+- **Bucket fill.** Quickly fill large areas, ideal for creaing terrain or cave layouts
+- **Layer system.** Organize maps with multiple layers to easily represent zones, points of interes, or regions of terrain
+- **Map export.** Export your finished map as a PNG
+
+
 ## Upcoming features
 - **Perlin noise layers** for adding texture, detail, or cover to a scene
-- **Paint bucket tool** for quickly filling terrain or carving out space in cave maps
 - **Resizable brush** for faster placement of coarse detail
 - **Local saves** so you can come back and keep editing later
 
