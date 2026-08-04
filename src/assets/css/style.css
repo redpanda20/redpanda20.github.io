@@ -127,6 +127,11 @@ h3 {
 	color: var(--clr-subtle);
 }
 
+strong {
+    font-weight: 700;
+    color: var(--clr-love);
+}
+
 /* * * * * * * Sections * * * * * * */
 
 @keyframes swipe {
